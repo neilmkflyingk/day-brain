@@ -1,8 +1,6 @@
 var block;
 var task; 
 
-
-
 function hourColors() {
   var now = dayjs();
   for (let i = 9; i < 18; i++) {
@@ -15,7 +13,6 @@ function hourColors() {
     }
   }
 }
-
 
 function loadData() {
   for (var i = 9; i < 18; i++) {
@@ -39,5 +36,8 @@ $(function() {
   hourColors();
   loadData();
 });
+
+var date = dayjs();
+$('#currentDay').text(date.format('dddd, MMMM D'));
 
 $('.saveBtn').on('click', handleSave);
